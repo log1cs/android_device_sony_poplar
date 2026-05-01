@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/sony/lilac
+DEVICE_PATH := device/sony/poplar
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5242880000
@@ -14,10 +14,10 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 include device/sony/yoshino-common/BoardConfigCommon.mk
 
 # Display
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 430
 
 # Kernel
-TARGET_KERNEL_CONFIG += sony/lilac.config
+TARGET_KERNEL_CONFIG += sony/poplar.config
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
@@ -27,4 +27,4 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.qcom
 
 # Inherit vendor board configs
-include vendor/sony/lilac/BoardConfigVendor.mk
+include vendor/sony/poplar/BoardConfigVendor.mk
